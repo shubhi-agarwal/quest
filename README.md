@@ -1,2 +1,2 @@
-# quest
-my first try at github
+# Quest
+My first try at github.
