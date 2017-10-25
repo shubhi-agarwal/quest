@@ -1,0 +1,62 @@
+#include<stdio.h>  
+
+ void main()                                     // start of main function
+ { 
+   int i,temp,even,odd,rem,count=0;              // local declarations  
+
+   for(i=1;i<=1000;i++)                         // for loop to check numbers between 1 to 1000
+    { 
+      temp=i;                                    
+
+      if(i>=10&&i<=99)                          // to check two digited variables
+       { 
+	even=0; odd=0;
+         for(int j=1;j<=2;j++)                  /* extracting digits form two digited nos & 
+                                                    operating on them */
+  	  {
+	   rem=temp%10;                          /* extracting digits */
+	   temp=temp/10;
+
+	    if(j%2==0)                            // storing squares of digits at even places in
+	     even=rem*rem;                        //    variable even
+                                                   
+	    else                                  // storing squares of digits at even places in
+	     odd=rem*rem;                         //variable odd
+
+   	   
+           }
+
+	 if(even==odd)                             // checking if the given no satisfies the
+	  {                                        // condition or not
+            printf("%d\n" ,i);
+	    count++;	                           //increasing the count of such nos
+	    }
+       }
+ 
+	if(i>=100&&i<=999)                        // to check three digited variables
+         { even=0; odd=0;
+	    for(int k=1;k<=3;k++)                 /* extracting digits form three digited nos & 
+                                                    operating on them */
+  	      {
+	       rem=temp%10;                       
+               temp=temp/10;
+
+	          if(k%2==0)                          // storing squares of digits at even places in
+	           even+=rem*rem;                     // variable even
+
+	          else if(k%2!=0)                     // storing squares of digits at odd places in
+	           odd+=rem*rem;                      // variable odd
+
+   	         
+                }
+
+             if(even==odd)                          // checking if given no satisfies the condition
+	      {
+                printf("%d\n" ,i);
+	        count++;	                    // increasing the count of such nos.
+	       }
+            }
+        }
+      printf("Number of such terms are->%d\n" ,count);       //printing no. of such nos btw 1-1000
+
+ }       						     // end of main
