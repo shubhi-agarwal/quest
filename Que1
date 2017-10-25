@@ -1,0 +1,51 @@
+#include<stdio.h>
+
+void main()                                                     // start of void main function
+{                                                               // local declarations
+  int n;
+
+   printf("Enter odd value of N (no. of lines to be printed)\n");              /*
+                                                                     demanding n as an input from the user */
+   scanf("%d" ,&n);
+   
+   if(n%2!=0)
+    break;
+  
+     
+   
+    for(int i=1;i<=((n+1)/2);i++)                                // for loop to print the first part of the pattern 
+     {
+         printf("\n");
+        for(int k=1;k<i;k++)                                     // for loop to print spaces 
+         {
+           printf(" ");
+          }
+
+
+        for(int j=i;j<=(n-i+1);j++)                             // for loop to print digits in the upper part of the pattern
+         {
+            printf("%d" ,j);
+
+           }
+
+                                                  
+       }
+         
+        for( int l=(((n-1)/2)+1); l<=n;l++)                      // for loop to print lower part of the pattern
+         {
+           
+	   for(int m=1;m<=(n-l);m++)                             // for loop to print spaces in lower part of pattern 
+	    {
+              printf(" ");
+              
+             }
+
+           for(int a=(n-l+1);a<=l;a++)                           // for loop to print digits of lower part of the pattern 
+            {
+               printf("%d" ,a);
+              }
+               printf("\n"); 
+           }                                                     // end of for loop l
+ }  
+}
+                                                             // end of main
